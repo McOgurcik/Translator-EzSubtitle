@@ -24,7 +24,7 @@ def handle_callback(id):
 def run_client_server():
     client_app.run(host='0.0.0.0', port=8080, debug=False, use_reloader=False)
 
-def split_audio_file(audio_path, chunk_duration=10, output_dir=None):
+def split_audio_file(audio_path, chunk_duration=1000, output_dir=None):
     """Разбивает аудиофайл на чанки заданной длительности"""
     if output_dir is None:
         output_dir = tempfile.mkdtemp(prefix="audio_segments_")
